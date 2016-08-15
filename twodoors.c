@@ -9,7 +9,7 @@ int main(int argc, const char * argv[]) {
     printf("Would you like to play? (y/n): ");
     scanf("%c", &play);
 
-    if (play == 'y') {
+    while (play == 'y') {
 
         printf("\nYou are a prisoner in a room with 2 doors and 2 guards.\n");
         printf("One of the doors will guide you to freedom and behind the other is a hangman --you don't know which is which.\n");
@@ -39,7 +39,14 @@ int main(int argc, const char * argv[]) {
                     break;
             }
         } while (!(choice >= 1 && choice <= 3));
-    }
 
+        // Flush out the extra input characters because C input is a pain
+        while (getchar() != '\n'); // Should check for EOF, but meh
+
+        printf("Would you like to play again? (y/n): ");
+
+        scanf("%c", &play);
+
+    }
     return 0;
 }
