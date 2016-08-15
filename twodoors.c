@@ -19,22 +19,26 @@ int main(int argc, const char * argv[]) {
         printf("\t1.Ask the truth-guard to point to the door of doom.\n");
         printf("\t2.Ask the liar-guard to point to the door of doom.\n");
         printf("\t3.Doesn't matter which one you pick.\n");
-        scanf("%d", &choice);
 
-        char answer[] = "No matter which one you choose the guards both tell you which door leads to death, and therefore you can pick the other door.\n";
-        switch (choice) {
-            case 1:
-                printf("%s", answer);
-                break;
-            case 2:
-                printf("%s", answer);
-                break;
-            case 3:
-                printf("%s", answer);
-                break;
-            default:
-                break;
-        }
+        do {
+            scanf("%d", &choice);
+
+            char answer[] = "No matter which one you choose the guards both tell you which door leads to death, and therefore you can pick the other door.\n";
+            switch (choice) {
+                case 1:
+                    printf("%s", answer);
+                    break;
+                case 2:
+                    printf("%s", answer);
+                    break;
+                case 3:
+                    printf("%s", answer);
+                    break;
+                default:
+                    printf("Enter a number between 1 and 3.\n");
+                    break;
+            }
+        } while (!(choice >= 1 && choice <= 3));
     }
 
     return 1;
