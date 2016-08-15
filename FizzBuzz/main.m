@@ -9,9 +9,20 @@
 #import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+    int target = 100;
+    for (int i = 1; i <= target; i++) {
+        if (i % 3 == 0) {
+            printf("Fizz");
+        }
+        
+        if (i % 5 == 0) {
+            printf("Buzz");
+        }
+        
+        if (i % 3 != 0 && i % 5 != 0) {
+            printf("%d", i);
+        }
+        printf("\n");
     }
     return 0;
 }
