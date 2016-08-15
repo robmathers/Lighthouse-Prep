@@ -3,7 +3,7 @@
 int main(int argc, const char * argv[]) {
 
     char play;
-    char choice;
+    int choice;
 
     printf("Welcome to Two doors.\n");
     printf("Would you like to play? (y/n): ");
@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
         printf("\t1.Ask the truth-guard to point to the door of doom.\n");
         printf("\t2.Ask the liar-guard to point to the door of doom.\n");
         printf("\t3.Doesn't matter which one you pick.\n");
-        scanf("%f", choice);
+        scanf("%d", &choice);
 
         char answer = "No matter which one you choose the guards both tell you which door leads to death, and therefore you can pick the other door.\n";
         switch (choice) {
