@@ -41,5 +41,5 @@ int main(int argc, const char * argv[]) {
         } while (!(choice >= 1 && choice <= 3));
     }
 
-    return 1;
+    return 0;
 }
