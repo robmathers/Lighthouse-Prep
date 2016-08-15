@@ -21,16 +21,16 @@ int main(int argc, const char * argv[]) {
         printf("\t3.Doesn't matter which one you pick.\n");
         scanf("%d", &choice);
 
-        char answer = "No matter which one you choose the guards both tell you which door leads to death, and therefore you can pick the other door.\n";
+        char answer[] = "No matter which one you choose the guards both tell you which door leads to death, and therefore you can pick the other door.\n";
         switch (choice) {
             case 1:
-                printf("%c", answer);
+                printf("%s", answer);
                 break;
             case 2:
-                printf("%c", answer);
+                printf("%s", answer);
                 break;
             case 3:
-                printf("%c", answer);
+                printf("%s", answer);
                 break;
             default:
                 break;
