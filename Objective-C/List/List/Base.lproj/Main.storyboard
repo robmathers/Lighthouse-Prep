@@ -18,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z0c-h2-VEU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z0c-h2-VEU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListViewCell" id="3kw-YV-vyh" customClass="ListViewCell">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3kw-YV-vyh" id="0wF-P1-L2r">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -61,7 +61,13 @@
                             <constraint firstAttribute="trailing" secondItem="Z0c-h2-VEU" secondAttribute="trailing" id="kvj-7m-skZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sVr-xi-sGT"/>
+                    <navigationItem key="navigationItem" id="sVr-xi-sGT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Etc-Lm-EEf">
+                            <connections>
+                                <segue destination="odI-hT-LPa" kind="show" identifier="addTodoItemSegue" id="zga-Nz-obm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="Z0c-h2-VEU" id="Spa-La-Dgf"/>
@@ -71,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="1000.5" y="513.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Item View Controller-->
         <scene sceneID="FDE-yB-CUW">
             <objects>
-                <viewController id="odI-hT-LPa" sceneMemberID="viewController">
+                <viewController id="odI-hT-LPa" customClass="AddItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eSp-u9-Hj6"/>
                         <viewControllerLayoutGuide type="bottom" id="CaH-U2-5nX"/>
@@ -84,6 +90,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="g84-KB-GqV">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="m8e-kX-41g">
+                            <connections>
+                                <action selector="cancel:" destination="odI-hT-LPa" id="rwb-PC-SOq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Try-es-947">
+                            <connections>
+                                <action selector="save:" destination="odI-hT-LPa" id="Y0c-y3-eL6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3hB-iz-nIP" userLabel="First Responder" sceneMemberID="firstResponder"/>
