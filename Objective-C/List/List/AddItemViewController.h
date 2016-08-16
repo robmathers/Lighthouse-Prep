@@ -17,5 +17,6 @@
 @interface AddItemViewController : UIViewController
 
 @property (weak, nonatomic) id <AddItemViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UITextField *itemTitleField;
 
 @end

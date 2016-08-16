@@ -88,7 +88,27 @@
                     <view key="view" contentMode="scaleToFill" id="K9H-gY-fJH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCY-re-mVF">
+                                <rect key="frame" x="16" y="124" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Todo Item Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4f-wp-8qb">
+                                <rect key="frame" x="20" y="95" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oCY-re-mVF" firstAttribute="top" secondItem="eSp-u9-Hj6" secondAttribute="bottom" constant="60" id="GPL-Gd-Gg9"/>
+                            <constraint firstItem="oCY-re-mVF" firstAttribute="top" secondItem="j4f-wp-8qb" secondAttribute="bottom" constant="8" id="O4P-vv-9YC"/>
+                            <constraint firstItem="oCY-re-mVF" firstAttribute="leading" secondItem="K9H-gY-fJH" secondAttribute="leadingMargin" id="fiR-rb-wh7"/>
+                            <constraint firstItem="oCY-re-mVF" firstAttribute="trailing" secondItem="K9H-gY-fJH" secondAttribute="trailingMargin" id="mZs-fq-h6p"/>
+                            <constraint firstItem="j4f-wp-8qb" firstAttribute="leading" secondItem="oCY-re-mVF" secondAttribute="leading" id="u96-3n-ioH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g84-KB-GqV">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="m8e-kX-41g">
@@ -103,6 +123,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="itemTitleField" destination="oCY-re-mVF" id="vpV-Vj-cNn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3hB-iz-nIP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
