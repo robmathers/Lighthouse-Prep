@@ -77,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="1000.5" y="513.5"/>
         </scene>
-        <!--Add Item View Controller-->
+        <!--New Todo Item-->
         <scene sceneID="FDE-yB-CUW">
             <objects>
                 <viewController id="odI-hT-LPa" customClass="AddItemViewController" sceneMemberID="viewController">
@@ -94,8 +94,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Todo Item Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4f-wp-8qb">
-                                <rect key="frame" x="20" y="95" width="119" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo Item Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4f-wp-8qb">
+                                <rect key="frame" x="16" y="99" width="97" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -110,7 +110,7 @@
                             <constraint firstItem="j4f-wp-8qb" firstAttribute="leading" secondItem="oCY-re-mVF" secondAttribute="leading" id="u96-3n-ioH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="g84-KB-GqV">
+                    <navigationItem key="navigationItem" title="New Todo Item" id="g84-KB-GqV">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="m8e-kX-41g">
                             <connections>
                                 <action selector="cancel:" destination="odI-hT-LPa" id="rwb-PC-SOq"/>

@@ -11,6 +11,7 @@
 @implementation AddItemViewController
 
 - (IBAction)save:(id)sender {
+    [self.delegate saveNewTodo:self.itemTitleField.text];
 }
 - (IBAction)cancel:(id)sender {
 }
