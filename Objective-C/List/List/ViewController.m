@@ -40,8 +40,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ListViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ListViewCell"];
-    
-    cell.titleLabel.text = @"My Title";
+    TodoItem *todo = self.todoItems[indexPath.row];
+    cell.titleLabel.text = todo.todoText;
     
     return cell;
 }

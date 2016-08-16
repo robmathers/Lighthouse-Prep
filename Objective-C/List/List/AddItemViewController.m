@@ -14,5 +14,6 @@
     [self.delegate saveNewTodo:self.itemTitleField.text];
 }
 - (IBAction)cancel:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end
