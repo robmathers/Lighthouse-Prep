@@ -52,6 +52,15 @@
     NSLog(@"Selected row at: %@", indexPath);
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.todoItems removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
+
+// AddItemViewControllerDelegate
+
 - (void)saveNewTodo:(NSString *)todoText {
     TodoItem *newTodo = [[TodoItem alloc] init];
     newTodo.todoText = todoText;
