@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    // Initialize todoItems list
+    self.todoItems = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
